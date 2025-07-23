@@ -39,5 +39,3 @@ This repository contains a simple REST API developed for the **PROG2 exam** usin
    ```bash
    uvicorn main:app --reload
    ```
-
-This project is licensed under the MIT License.
