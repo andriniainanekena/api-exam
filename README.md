@@ -4,8 +4,8 @@ This repository contains a simple REST API developed for the **PROG2 exam** usin
 
 ## Student Information
 
-- **Name **: ANDRINIAINA Mijoro Nekena 
-- **ID   **: STD24143
+- **Name**: ANDRINIAINA Mijoro Nekena 
+- **Student ID**: STD24143
 - **Class**: K1
 
 ## Technologies and Tools
