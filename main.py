@@ -31,3 +31,16 @@ async def not_found(request: Request, exc):
 async def create_posts(new_posts: List[Post]):
     posts.extend(new_posts)
     return posts
+
+@app.get("/posts", response_model=List[Post])
+async def get_posts():
+    return posts
+
+@app.put("/posts")
+async def update_post(updated_post: Post):
+    for i, post in enumerate(posts):
+        if post.title == updated_post.title:
+            posts[i] = updated_post
+            return posts[i]
+    posts.append(updated_post)
+    return updated_post
