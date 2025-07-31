@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Request, Response, status, Depends
+from fastapi.responses import HTMLResponse, PlainTextResponse
 from pydantic import BaseModel
 
 app = FastAPI()
