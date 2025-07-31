@@ -7,6 +7,6 @@ app = FastAPI()
 async def ping():
     return "pong"
 
-@app.get("/home")
+@app.get("/home", response_class=HTMLResponse)
 async def home():
-    return {"<h1>Welcome home</h1>"}
+    return "<h1>Welcome home!</h1>"
