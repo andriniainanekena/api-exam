@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, Request, Response, status, Depends
 from fastapi.responses import HTMLResponse, PlainTextResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import List, Optional
 from datetime import datetime
 
@@ -27,3 +27,7 @@ async def home():
 async def not_found(request: Request, exc):
     return HTMLResponse(content="<h1>404 NOT FOUND</h1>", status_code=404)
 
+@app.post("/posts", status_code=status.HTTP_201_CREATED)
+async def create_posts(new_posts: List[Post]):
+    posts.extend(new_posts)
+    return posts
