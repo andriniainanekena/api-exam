@@ -32,7 +32,7 @@ async def create_posts(new_posts: List[Post]):
     posts.extend(new_posts)
     return posts
 
-@app.get("/posts", response_model=List[Post])
+@app.get("/posts")
 async def get_posts():
     return posts
 
