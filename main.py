@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-@app.get("/ping")
+@app.get("/ping", response_class=PlainTextResponse)
 async def ping():
     return "pong"
 
