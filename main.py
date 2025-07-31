@@ -6,6 +6,15 @@ from datetime import datetime
 
 app = FastAPI()
 
+posts = []
+
+class Post(BaseModel):
+    author: str
+    title: str
+    content: str
+    creation_datetime: datetime
+
+
 @app.get("/ping", response_class=PlainTextResponse)
 async def ping():
     return "pong"
